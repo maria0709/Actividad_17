@@ -14,19 +14,20 @@ namespace Actividad_17
         static void Main(string[] args)
         {
 
-            double primerNumero;
-            double segundoNumero;
+            double primerNumero, 
+                
+                segundoNumero;
 
             Console.Write("Por favor ingrese el primer número: ");
             bool resultado = Double.TryParse(Console.ReadLine(), out primerNumero);
             if (!resultado)
             {
                 Console.WriteLine("Ingreso inválido, no puede ser interpretado como un valor numérico.");
-                Console.ReadKey();
-                return;
                 
-            }
+               return;
            
+            }
+            Console.ReadKey();
             Console.Write("Por favor ingrese el segundo número: ");
             resultado = Double.TryParse(Console.ReadLine(), out segundoNumero);
             if (!resultado)
@@ -34,6 +35,7 @@ namespace Actividad_17
                 Console.WriteLine("Ingreso inválido, no puede ser interpretado como numérico.");
                 return;
             }
+           
             Console.WriteLine("\r");
             Console.WriteLine($"Suma: {primerNumero + segundoNumero}");
             Console.WriteLine($"Resta: {primerNumero - segundoNumero}");
